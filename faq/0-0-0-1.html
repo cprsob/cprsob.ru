@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <style>
+  span[id*="iCode"] {display:block;margin: 10px 0 20px;background: #ffffff;border-radius: 8px;padding: 10px; padding-right: 170px;position: relative;}span[id*="iCode"] div[id*="iCode"] {display: none;}span[id*="iCode"].openednow {padding-right: 170px; min-height: 110px;}span[id*="iCode"].openednow div[id*="iCode"] {display: block;} span[id*="gbut"] {width: 23px;height: 23px;background: #ffffff url('../.s/src/moder_panel/moder.png') no-repeat -20px -20px;margin: 0 0 0 20px;cursor: pointer;border-radius: 50%; display: inline-block; vertical-align: middle;}span[id*="gbut"].openednow {background-position: -41px -20px;}div[id*="imblock"] {position:relative;margin-top: 12px;}div#imblock1 {margin-top: 7px;}div[id*="imblock"] span[id*="gbut"] {top: 0;margin: 0 0 0 21px;}#blM40 input[type="file"] {border:none;max-width: 80%;}#blM40 input[name*="iws"], #blM40 input[name*="ihs"] {width: 35px !important; padding: 6px 0 !important; text-align: center !important;}#blM40 input[name*="iws"] {margin-right: 5px;}#blM40 input[name*="ihs"] {margin-left: 5px;}.iCode_el {margin: 0;padding: 0;display: block; float: left; width: 90px; box-sizing: border-box; position: relative;}.iCode_el .iCode_el_tooltip {margin-bottom: 15px;z-index:1;visibility: hidden;opacity: 0;position: absolute;bottom: 100%;left: 0;text-align: left;padding: 5px 12px;border-radius: 4px;background: #000;background: rgba(0, 0, 0, 0.8);color: #fff;font: 400 11px 'PT Sans', Arial, sans-serif;line-height: 1.5;white-space: nowrap;transition: all .2s ease-out;}.iCode_el:hover .iCode_el_tooltip {opacity: 1;visibility: visible;margin-bottom: 10px;}.iCode_el_tooltip:hover {opacity: 0 !important;visibility: hidden !important;margin-bottom: 15px !important;}span.iCode_el_tooltip:before {position: absolute;display: block;content: "";top: 100%;left: 0;width: 100%;height: 12px;}span.iCode_el_tooltip:after {position: absolute;display: block;content: "";top: 100%;left: 30px;margin: 0 0 0 -6px;border: 6px solid rgba(0, 0, 0, 0);border-top-color: #000;border-top-color: rgba(0, 0, 0, 0.8);}.iCode_block {clear: both; width: 100%; margin: 0 0 10px;}.iCode_block:after {content: '';display: block;clear: both;width: 100%;}.iCode_in {display: block; width: auto; padding-left: 95px;}.iCode_main_inp {padding: 5px 0px !important; font-family: Arial,Helvetica,sans-serif !important; font-size: 11px !important; width: 90px !important; min-width: 90px !important; max-width: 90px !important; margin: 0 !important; background: #F0F0F0 !important; border: 1px inset #F0F0F0 !important;}.iCode_in input {font-family: Arial,Helvetica,sans-serif !important; font-size: 11px !important; text-align: left !important; padding: 6px !important; width: 100%; max-width: 100%;}.iPhotoPrev {width: 150px;position: absolute;top: 10px;right: 10px;max-height: 120px;overflow: hidden;text-align: center;}div .iPhotoPrev a{display: block;max-height: 100px;overflow: hidden;margin: 0 0 5px }
+  </style>
+  <title></title>
+  <style type="text/css">
+  .UhideBlock {display:none}
+  </style>
+</head>
+<body>
+  <div></div>
+  <head>
+  <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="ru">
+    <title>FAQ - Центр перспективных исследований</title>
+    <link type="text/css" rel="StyleSheet" href="http://cprsob.clan.su/_st/my.css">
+    <link type="text/css" rel="StyleSheet" href="http://s31.ucoz.net/src/base.css">
+    <link type="text/css" rel="StyleSheet" href="http://s31.ucoz.net/src/layer7.css">
+    <script type="text/javascript" src="http://s31.ucoz.net/src/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+    window.ulb = {photoPage: "Перейти на страницу с фотографией.",closeBtn: "Закрыть", error: "Запрошенный контент не может быть загружен. Пожалуйста, попробуйте позже.", next: "Вперед", prev: "Предыдущий", btnPlay: "Начать слайдшоу", btnToggle: "Изменить размер"}
+    </script>
+    <link href="http://s31.ucoz.net/src/ulightbox/ulightbox.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://s31.ucoz.net/src/ulightbox/ulightbox.js"></script>
+    <script type="text/javascript" src="http://s31.ucoz.net/src/uwnd.js?2"></script>
+    <script type="text/javascript">
+    //<!--
+        function uSocialLogin(t){
+                var params = { 'vkontakte':{ 'width':790, 'height':400 }, 'ok':{ 'width':560, 'height':310 }, 'facebook':{ 'width':950, 'height':520 }, 'yandex':{ 'width':870, 'height':515 }, 'google':{ 'width':700, 'height':600 }, 'twitter':{ 'width':800, 'height':400 } };
+                var ref = escape(location.protocol + '//' + ('cprsob.ru' || location.hostname) + location.pathname + ((location.hash ? ( location.search ? location.search + '&' : '?' ) + 'rnd=' + Date.now() + location.hash : ( location.search || '' ))));
+                // var ref = escape(location.href);
+                window.open('/'+t+'?ref='+ref,'conwin','width='+params[t].width+',height='+params[t].height+',status=1,resizable=1,left='+parseInt((screen.availWidth/2)-(params[t].width/2))+',top='+parseInt((screen.availHeight/2)-(params[t].height/2)-20)+'screenX='+parseInt((screen.availWidth/2)-(params[t].width/2))+',screenY='+parseInt((screen.availHeight/2)-(params[t].height/2)-20));
+                return false;
+        }
+    //-->
+    </script>
+    <link type="text/css" rel="StyleSheet" href="http://s31.ucoz.net/src/social.css">
+  </head>
+  <p></p>
+  <table border="0" width="1000" cellspacing="0" cellpadding="0" height="100%">
+    <tr>
+      <td align="right" valign="bottom" style="color:#C0C0C0;" height="275" background="../images/shapka.jpg">
+        <a href="../stat/1503072855.html">
+        <div style="position: absolute; width: 977px; height: 236px; z-index: 1; left: 10px; top: 10px; cursor: hand" id="layer1">
+          &nbsp;
+        </div></a>Суббота, 16.04.2016, 04:19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Приветствую Вас <b>Гость</b> | <a href="javascript://" rel="nofollow" onclick="new _uWnd('LF',' ',-250,-110,{autosize:1,closeonesc:1,resize:1},{url:'/index/40'});return false;" style="color:#C0C0C0;">Вход</a> &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <table border="0" cellpadding="0" cellspacing="10" width="1000" bgcolor="#A77B62" height="100%">
+          <tr>
+            <td valign="top" width="194">
+              <table border="1" cellpadding="2" cellspacing="2" width="194" style="background-color:#FFEBDD; border: 2px solid #764C35; border-collapse: collapse" bordercolor="#764C35" bgcolor="#FFEBDD">
+                <tr>
+                  <td style="padding:5px;">
+                    <div id="uMenuDiv1" class="uMenuV" style="position:relative;">
+                      <ul class="uMenuRoot">
+                        <li>
+                          <div class="umn-tl">
+                            <div class="umn-tr">
+                              <div class="umn-tc"></div>
+                            </div>
+                          </div>
+                          <div class="umn-ml">
+                            <div class="umn-mr">
+                              <div class="umn-mc">
+                                <div class="uMenuItem">
+                                  <a href="../stat/1503072855.html"><span>Интернет - конференции</span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="umn-bl">
+                            <div class="umn-br">
+                              <div class="umn-bc">
+                                <div class="umn-footer"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="umn-tl">
+                            <div class="umn-tr">
+                              <div class="umn-tc"></div>
+                            </div>
+                          </div>
+                          <div class="umn-ml">
+                            <div class="umn-mr">
+                              <div class="umn-mc">
+                                <div class="uMenuItem">
+                                  <a href="../load.html"><span>Каталог конференций</span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="umn-bl">
+                            <div class="umn-br">
+                              <div class="umn-bc">
+                                <div class="umn-footer"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="umn-tl">
+                            <div class="umn-tr">
+                              <div class="umn-tc"></div>
+                            </div>
+                          </div>
+                          <div class="umn-ml">
+                            <div class="umn-mr">
+                              <div class="umn-mc">
+                                <div class="uMenuItem">
+                                  <a href="../index/0-8.html"><span>Программный комитет</span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="umn-bl">
+                            <div class="umn-br">
+                              <div class="umn-bc">
+                                <div class="umn-footer"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="umn-tl">
+                            <div class="umn-tr">
+                              <div class="umn-tc"></div>
+                            </div>
+                          </div>
+                          <div class="umn-ml">
+                            <div class="umn-mr">
+                              <div class="umn-mc">
+                                <div class="uMenuItem">
+                                  <a href="../index/0-6.html"><span>Сборники материалов</span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="umn-bl">
+                            <div class="umn-br">
+                              <div class="umn-bc">
+                                <div class="umn-footer"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="umn-tl">
+                            <div class="umn-tr">
+                              <div class="umn-tc"></div>
+                            </div>
+                          </div>
+                          <div class="umn-ml">
+                            <div class="umn-mr">
+                              <div class="umn-mc">
+                                <div class="uMenuItem">
+                                  <a href="../index/0-5.html"><span>Условия участия</span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="umn-bl">
+                            <div class="umn-br">
+                              <div class="umn-bc">
+                                <div class="umn-footer"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="umn-tl">
+                            <div class="umn-tr">
+                              <div class="umn-tc"></div>
+                            </div>
+                          </div>
+                          <div class="umn-ml">
+                            <div class="umn-mr">
+                              <div class="umn-mc">
+                                <div class="uMenuItem">
+                                  <a href="../index/0-4.html"><span>Заявка на участие</span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="umn-bl">
+                            <div class="umn-br">
+                              <div class="umn-bc">
+                                <div class="umn-footer"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="umn-tl">
+                            <div class="umn-tr">
+                              <div class="umn-tc"></div>
+                            </div>
+                          </div>
+                          <div class="umn-ml">
+                            <div class="umn-mr">
+                              <div class="umn-mc">
+                                <div class="uMenuItem">
+                                  <a href="../faq.html"><span>Вопросы и ответы</span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="umn-bl">
+                            <div class="umn-br">
+                              <div class="umn-bc">
+                                <div class="umn-footer"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="umn-tl">
+                            <div class="umn-tr">
+                              <div class="umn-tc"></div>
+                            </div>
+                          </div>
+                          <div class="umn-ml">
+                            <div class="umn-mr">
+                              <div class="umn-mc">
+                                <div class="uMenuItem">
+                                  <a href="../index/0-7.html"><span>О центре</span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="umn-bl">
+                            <div class="umn-br">
+                              <div class="umn-bc">
+                                <div class="umn-footer"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="umn-tl">
+                            <div class="umn-tr">
+                              <div class="umn-tc"></div>
+                            </div>
+                          </div>
+                          <div class="umn-ml">
+                            <div class="umn-mr">
+                              <div class="umn-mc">
+                                <div class="uMenuItem">
+                                  <a href="../index/0-3.html"><span>Контакты</span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="umn-bl">
+                            <div class="umn-br">
+                              <div class="umn-bc">
+                                <div class="umn-footer"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <script type="text/javascript">
+                    $(function(){_uBuildMenu('#uMenuDiv1',0,document.location.href+'/','uMenuItemA','uMenuArrow',2500);})
+                    </script>
+                  </td>
+                </tr>
+              </table><br>
+              <div align="center">
+                <a rel="nofollow" href="../panel/index.html" target="_blank" title="uCoz Counter"><img alt="" style="margin:0;padding:0;border:0;" src="http://cprsob.clan.su/stat/1460758773" height="31" width="88"></a>
+              </div>
+            </td>
+            <td valign="top" height="100%">
+              <table border="0" cellpadding="5" cellspacing="0" width="100%" height="100%">
+                <tr>
+                  <td style="background-color:#FFEBDD; border: 2px solid #764C35;" class="text" height="100%" valign="top">
+                    <table border="0" cellpadding="1" cellspacing="1" width="100%">
+                      <tr>
+                        <td width="80%">
+                          <a href="../stat/1503072855.html">Интернет - конференции</a> &raquo; Вопросы и ответы
+                        </td>
+                        <td align="right" style="white-space: nowrap;"></td>
+                      </tr>
+                    </table>
+                    <hr>
+                    <h1>Вопросы и ответы</h1>
+                    <p></p>
+                    <script type="text/javascript">
+                    function openery() {
+                    try {
+                    var tr = checksubmit();
+                    if (!tr) {
+                        return false;
+                    }
+                    } catch(e) {}
+                    document.getElementById('fqF5').disabled = true;
+                    new _uWnd('addEnt', 'Добавление материала', -310, -100, {autosize:1, modal:1, closeonesc:1, resize:0, topclass:'wndMaterialAdded'}, {form:'addEntForm'});
+                    }
+
+                    function addImgF(){
+                    var num=parseInt(document.getElementById('numi').value);
+                    if (num<5){if (num<1){num+=2;}else {num+=1;}var nnum=num-1;document.getElementById('imblock'+nnum).innerHTML+='<span style="padding:0 7px 0 0;">['+num+']</span> <input type="file" id="fln'+num+'" name="file'+num+'" size="20" onchange="getimage('+num+');"><span id="iCode'+num+'"></span><div id="imblock'+num+'"></div>'; document.getElementById('numi').value=num;}
+                    if (num>=5) {document.getElementById('iplus').innerHTML='<span style="padding-right:7px;">[1]</span> ';}
+                    }
+
+                    function getimage(n){
+                    var t = document.getElementById('fln'+n);
+                    if (t.value){
+                    ext = new Array('png','jpg','gif','jpeg','jpe');
+                    var img = t.value.replace(/\\/g,'/');
+                    var pic = img.toLowerCase();
+                    var ok=0;
+                    for (i=0;i<ext.length;i++){m = pic.indexOf('.' + ext[i]);if (m != -1) {ok=1;break;}}
+                    if (ok==1){var code='$IMAGE'+n+'$'; var iurl='$IMG_URL'+n+'$' ;var title='$IMG'+n+'_TITLE$'; var alt='$IMG'+n+'_ALT$'; document.getElementById('iCode'+n).innerHTML='<div class="iCode_block"><div class="iCode_el"><input class="iCode_main_inp" type="text" readonly onClick="select(this)" name="h1" value="'+code+'" size="'+(code.length)+'" style="font-family:\'courier new\';direction:ltr;text-align:center;background:#F0F0F0;color:#0000FF;border:1px inset"><span class="iCode_el_tooltip">Используйте этот код в редакторе для вставки изображения превью + <br/>увеличения по клику. Данный код содержит \'title\' и \'alt\'</span></div> <span id="gbut'+n+'" onclick="g_open_iCode('+n+');"></div></span></div><div id="iCode_'+n+'"><div class="iCode_block"><div class="iCode_el"><input class="iCode_main_inp" type="text" readonly onClick="select(this)" name="t'+n+'" value="'+title+'" size="'+(title.length)+'" style="font-family:\'courier new\';direction:ltr;text-align:center;background:#F0F0F0;color:#0000FF;border:1px inset"><span class="iCode_el_tooltip">Используйте этот код для тонкой настройки вывода изображения.<br/>Код выведет отдельно введенное вами значение в поле \"Title\"</span></div> <div class="iCode_in"><input style="font-size:7pt;" type="text" name="img'+n+'_title" size="30" maxlength="70" title="Значение &quot;title&quot; изображения"></div>' + '</div><div class="iCode_block"><div class="iCode_el"><input class="iCode_main_inp" type="text" readonly onClick="select(this)" name="a'+n+'" value="'+alt+'" size="'+(alt.length)+'" style="font-family:\'courier new\';direction:ltr;text-align:center;background:#F0F0F0;color:#0000FF;border:1px inset"><span class="iCode_el_tooltip">Используйте этот код для тонкой настройки вывода изображения.<br/>Код выведет отдельно введенное вами значение в поле \"Alt\"</span></div> <div class="iCode_in"><input style="font-size:7pt;" type="text" name="img'+n+'_alt" size="30" maxlength="70" title="Значение &quot;alt&quot; изображения"></div></div></div>';$('#gbut'+n).show()}
+                    else {document.getElementById('iCode'+n).innerHTML='';_uWnd.alert('Недопустимый формат изображения','',{w:230,h:80,tm:3000});}}
+                    else {document.getElementById('iCode'+n).innerHTML='';}
+                    }
+
+                    function g_open_iCode(num){
+                    $('#iCode' + num).toggleClass('openednow');
+                    $('#gbut' + num).toggleClass('openednow');
+                    };
+                    </script>
+                    <form method="post" id="addEntForm" style="margin:0" name="addform" enctype="multipart/form-data" action="http://cprsob.ru/faq/" onsubmit="openery();return false;">
+                      <input type="hidden" name="jkd498" value="1"><input type="hidden" name="jkd428" value="1">
+                      <table border="0" width="100%" cellspacing="1" cellpadding="2" class="manTable" id="fqM20">
+                        <tr>
+                          <td width="30%" class="manTd1">Тема вопроса <font color="red">*</font>:</td>
+                          <td class="manTd2"><input type="text" style="width:100%;" class="manFl" name="subject" size="30" maxlength="230"></td>
+                        </tr>
+                        <tr>
+                          <td height="10" class="manTdSep" colspan="2">
+                            <hr class="manHr">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2" class="manTdBrief">
+                            <div id="txtPart555brief">
+                              <div style="padding-bottom:3px;">
+                                Описание вопроса:
+                              </div>
+                              <div class="ucoz-editor-bbpanel ucoz-editor-panel" style="display:none;padding-bottom:3px;">
+                                <span style="padding-right:1px;" id="bc1"><input type="button" title="Bold" value="b" onclick="simpletag('b','','','brief','')" class="codeButtons" id="b" style="width:20px;font-weight:bold"></span><span style="padding-right:1px;" id="bc2"><input type="button" title="Italic" value="i" onclick="simpletag('i','','','brief','')" class="codeButtons" id="i" style="width:20px;font-style:italic"></span><span style="padding-right:1px;" id="bc3"><input type="button" title="Underline" value="u" onclick="simpletag('u','','','brief','')" class="codeButtons" id="u" style="width:20px;text-decoration:underline"></span><span style="padding-right:1px;" id="bc4"><select id="fsize" class="codeButtons" onchange="alterfont(this.options[this.selectedIndex].value,'size','brief','');this.selectedIndex=0;">
+                                  <option value='0'>
+                                    SIZE
+                                  </option>
+                                  <option value='6'>
+                                    6 pt
+                                  </option>
+                                  <option value='7'>
+                                    7 pt
+                                  </option>
+                                  <option value='8'>
+                                    8 pt
+                                  </option>
+                                  <option value='9'>
+                                    9 pt
+                                  </option>
+                                  <option value='10'>
+                                    10 pt
+                                  </option>
+                                  <option value='11'>
+                                    11 pt
+                                  </option>
+                                  <option value='12'>
+                                    12 pt
+                                  </option>
+                                  <option value='13'>
+                                    13 pt
+                                  </option>
+                                  <option value='14'>
+                                    14 pt
+                                  </option>
+                                  <option value='15'>
+                                    15 pt
+                                  </option>
+                                  <option value='16'>
+                                    16 pt
+                                  </option>
+                                  <option value='17'>
+                                    17 pt
+                                  </option>
+                                  <option value='18'>
+                                    18 pt
+                                  </option>
+                                  <option value='19'>
+                                    19 pt
+                                  </option>
+                                  <option value='20'>
+                                    20 pt
+                                  </option>
+                                  <option value='21'>
+                                    21 pt
+                                  </option>
+                                  <option value='22'>
+                                    22 pt
+                                  </option>
+                                </select></span><span style="padding-right:1px;" id="bc6"><select id="fcolor" class="codeButtons" onchange="alterfont(this.options[this.selectedIndex].value, 'color','brief','');this.selectedIndex=0;">
+                                  <option value='0'>
+                                    COLOR
+                                  </option>
+                                  <option value='blue' style='color:blue'>
+                                    Blue
+                                  </option>
+                                  <option value='red' style='color:red'>
+                                    Red
+                                  </option>
+                                  <option value='purple' style='color:purple'>
+                                    Purple
+                                  </option>
+                                  <option value='orange' style='color:orange'>
+                                    Orange
+                                  </option>
+                                  <option value='yellow' style='color:yellow'>
+                                    Yellow
+                                  </option>
+                                  <option value='gray' style='color:gray'>
+                                    Gray
+                                  </option>
+                                  <option value='green' style='color:green'>
+                                    Green
+                                  </option>
+                                </select></span> <span style="padding-right:1px;" id="bc7"><input type="button" title="URL" value="http://" onclick="tag_url('brief','')" class="codeButtons" style="direction:ltr;width:45px;" id="url"></span> <span style="padding-right:1px;" id="bc8"><input type="button" title="E-mail" value="@" onclick="tag_email('brief','')" class="codeButtons" style="width:30px;" id="email"></span> <span style="padding-right:1px;" id="bc9"><input type="button" title="Image" value="img" onclick="tag_image('brief','')" class="codeButtons" style="width:35px;" id="img"></span><span style="padding-right:1px;" id="bc18"><input type="button" title="Hide from Guest" value="hide" onclick="simpletag('hide','','','brief','')" class="codeButtons" style="width:40px;" id="hide"></span><span style="padding-right:1px;" id="bc12"><input type="button" title="List" value="list" onclick="tag_list('brief','')" class="codeButtons" id="list" style="width:30px;"></span><span style="padding-right:1px;" id="bc13"><input type="button" title="Left" style="width:20px;text-align:left;" value='&middot;&middot;&middot;' onclick="simpletag('l','cdl','&middot;&middot;&middot;','brief')" class="codeButtons" id="cdl"></span><span style="padding-right:1px;" id="bc14"><input type="button" title="Center" style="width:20px;text-align:center;" value='&middot;&middot;&middot;' onclick="simpletag('c','cdc','&middot;&middot;&middot;','brief')" class="codeButtons" id="cdc"></span><span style="padding-right:1px;" id="bc15"><input type="button" title="Right" style="width:20px;text-align:right;" value='&middot;&middot;&middot;' onclick="simpletag('r','cdr','&middot;&middot;&middot;','brief')" class="codeButtons" id="cdr"></span><span style="padding-right:1px;" id="bc16"><input type="button" title="All codes" style="width:60px;" value="All codes" onclick="window.open('http://cprsob.ru/index/17','bbcodes','scrollbars=1,width=550,height=450,left=0,top=0');" class="codeButtons"></span><span style="padding-right:1px;" id="bc17"><input style="font-weight:bold;width:20px" type="button" value="/" class="codeButtons codeCloseAll" title="Close all opened codes" onclick="closeall('brief','');"></span><input type="hidden" id="tagcount" value="0">
+                              </div>
+                              <textarea rows="10" style="width:100%;height:150px;" id="brief" name="brief" class="manFl" cols="40"></textarea> <input type="hidden" id="edttbrief" name="edttbrief" value="4">
+                              <div class="ucoz-editor-bottom">
+                                <input id="format_brief" type="checkbox" name="format_brief" value="1" data-choice=""><label for="format_brief">Заменять переводы строк тегом <b>&lt;BR&gt;</b></label>
+                              </div>
+                              <link rel="stylesheet" type="text/css" href="http://s31.ucoz.net/src/ckeditor/custom/ueditor.css">
+                              <script type="text/javascript">
+                                if( !window.uCoz ) window.uCoz = {};
+                                if( !uCoz.editor ) uCoz.editor = {};
+                                uCoz.editor.type = 4; // preferred editor type (Number), 1 - visual, 2 - BBCode, 3 - pure HTML
+                                uCoz.editor.html_allowed = false;
+                                uCoz.editor.bbcodes_src = 'http://s31.ucoz.net/src/bbcodes.js?2';
+                                uCoz.editor.ckeditor_src = 'http://s31.ucoz.net/src/ckeditor/ckeditor.js';
+                                uCoz.editor.lang = 'ru'; // site language code
+                                uCoz.editor.use_br = false; // use <br> instead of <p> for Enter
+                              </script> 
+                              <script type="text/javascript" src="http://s31.ucoz.net/src/ckeditor/custom/ueditor.js"></script>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="10" class="manTdSep" colspan="2">
+                            <hr class="manHr">
+                          </td>
+                        </tr>
+                        <tr id="iM38">
+                          <td class="manTd1" id="iM39">
+                            Изображения [<a href="javascript://" rel="nofollow" onclick="new _uWnd('HelpWd','Помощник',360,150,{align:'justify',closeonesc:1},{url:'/index/90-5'});return false;" class="noun"><b>?</b></a>]:
+                            <div class="fHelp">
+                              Макс. размер - <b>500</b>Kb
+                            </div>
+                          </td>
+                          <td class="manTd2" id="iM40">
+                            <div style="display:inline;" id="iplus">
+                              <input class="button" style="width:24px;" type="button" value=" + " onclick="addImgF();" title="Добавить поле для файла">
+                            </div><input type="file" id="fln1" name="file1" size="20" onchange="getimage(1);"><span id="iCode1"></span>
+                            <div id="imblock1"></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="manTd1">Полное имя:</td>
+                          <td class="manTd2"><input type="text" class="manFl" name="name" style="width:100%;" size="20" maxlength="40"></td>
+                        </tr>
+                        <tr>
+                          <td class="manTd1">E-mail:</td>
+                          <td class="manTd2"><input type="text" class="manFl" name="email" style="width:100%;" size="20" maxlength="60"></td>
+                        </tr>
+                        <tr>
+                          <td height="10" class="manTdSep" colspan="2">
+                            <hr class="manHr">
+                          </td>
+                        </tr>
+                        <tr id="fqM15">
+                          <td class="manTd1" id="fqM16">Код <font color="red" class="manStar">*</font>:</td>
+                          <td class="manTd2" id="fqM17"><input class="securityCode" type="text" name="code" size="5" maxlength="5"><input type="hidden" name="seckey" value="2744109106653678373"> <img alt="" style="margin:0;padding:0;border:0;cursor:pointer;" align="absmiddle" id="secImg" name="isec" title="Обновить код безопасности" onclick="this.src='/secure/?k=2744109106653678373;s=faq;tm='+Math.random();" src="../secure/index.html"></td>
+                        </tr>
+                        <tr id="fqM18">
+                          <td height="10" class="manTdSep" colspan="2" id="fqM19">
+                            <hr class="manHr">
+                          </td>
+                        </tr>
+                        <tr id="fqM26">
+                          <td align="center" colspan="2" class="manTdBut" id="fqM27"><input type="submit" style="display:none;" id="doSmbBt"><input type="hidden" name="ssid" value="711517606504621436272"><input class="manFlSbm" id="fqF5" type="button" style="font-weight:bold;" value="Добавить" onclick="document.getElementById('doSmbBt').click();"> &nbsp;<input class="manFlRst" id="fqF6" type="reset" value="Очистить" onclick="document.isec.src='/secure/?k=2744109106653678373;s=faq;tm='+Math.floor(Math.random()*1e8);"></td>
+                        </tr>
+                      </table><input type="hidden" name="a" value="2"><input type="hidden" id="numi" value="1">
+                    </form>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td height="35" align="center" style="color:#0039C0" bgcolor="#A77B62" background="images/bottombar.jpg"><span class="pbWVlt6h"><img style="margin:0;padding:0;border:0;width:80px;height:15px;" src="http://s31.ucoz.net/img/cp/14.gif" alt=""></span></td>
+    </tr>
+  </table>
+  <div id="utbr8214" rel="s31"></div>
+</body>
+</html>
